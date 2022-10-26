@@ -26,7 +26,7 @@ local function UpdateSystemOptions()
 			order = optionOrder + 1,
 			type = 'toggle',
 			name = boardname,
-			desc = L['Enable/Disable ']..boardname,
+			desc = L['Enable/Disable']..boardname,
 			get = function(info) return E.db.benikui.dashboards.system.chooseSystem[boardname] end,
 			set = function(info, value) E.db.benikui.dashboards.system.chooseSystem[boardname] = value; E:StaticPopup_Show('PRIVATE_RL'); end,
 		}
